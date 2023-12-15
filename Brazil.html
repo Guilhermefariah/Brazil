@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa</title>
+</head>
+<body>  
+    <h1>Visa System</h1>
+    <input type="text" name="visatxt"id="visatxt"> Your country 
+    <input type="button" value="check" onclick='test()'>
+    <div id="true">
+    
+    </div>  
+    <script>
+        function test() {
+            let visaTv = window.document.querySelector('input#visatxt')
+            let div1 = window.document.querySelector('div#true')
+            let   country = visaTv.value.toUpperCase()
+            div1.innerHTML = `<p> Living in <strong>${country}</strong></p>`
+            if (country === 'BRAZIL'){
+                div1.innerHTML += '<p>you is <strong>brazilian</strong></p>'
+            }else {
+                div1.innerHTML += '<P> you is foreign </p>'
+            }
+        }
+    </script>  
+</body>
+</html>
